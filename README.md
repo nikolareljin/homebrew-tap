@@ -1,6 +1,9 @@
 # nikolareljin/homebrew-tap
 
-Homebrew formulas for tools published under the nikolareljin GitHub account.
+This repository is a Homebrew tap for command-line tools published by Nikola Reljin.
+It provides prebuilt binaries via Homebrew for fast, reliable installation on macOS
+(Apple Silicon and Intel).
+
 
 ## Install
 
