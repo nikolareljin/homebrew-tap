@@ -1,4 +1,4 @@
-# nikolareljin/homebrew-tap
+# nikolareljin/tap
 
 This repository is a Homebrew tap for command-line tools published by Nikola Reljin.
 It provides prebuilt binaries via Homebrew for fast, reliable installation on macOS
