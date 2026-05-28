@@ -1,22 +1,22 @@
 class ImageView < Formula
   desc "CLI image viewer"
   homepage "https://github.com/nikolareljin/image-view"
-  version "0.6.1"
+  version "0.6.2"
   tag = version
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nikolareljin/image-view/releases/download/#{tag}/image-view-#{tag}-macos-arm64.tar.gz"
-      sha256 "bb89fe5e5af2bf24119b044f293e984070b2f8c492b81dd57c74d9ba998444ca"
+      sha256 "9f3ce20036b9d4830666ca2e7934f807d9eb913a262044d0d000c911f0c71429"
     else
       url "https://github.com/nikolareljin/image-view/releases/download/#{tag}/image-view-#{tag}-macos-x86_64.tar.gz"
-      sha256 "031d613def16cdd0a7882a1b7cd0c9b58ca426e6013be188b7cbcac38b68342f"
+      sha256 "559dc0365e1569717f058ad76bfcceb604cd412a2501d19795dd23ed83e3a1ae"
     end
   end
 
   on_linux do
     url "https://github.com/nikolareljin/image-view/releases/download/#{tag}/image-view-#{tag}-linux-x86_64.tar.gz"
-    sha256 "ebf7248b584096c72969f2f56b5b264edf4f13a7fe1d5ad7fe6ca014e16ec3d4"
+    sha256 "85c731c4538a30f72c2ab9fc1f57cc3466dba0bab5496e9e808976115013dd9a"
   end
 
   def install
