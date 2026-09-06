@@ -28,3 +28,10 @@ CLI image viewer for terminal environments. View images directly in your termina
 ## Updates
 
 Formulas in this tap are automatically updated when new releases are published. The update process is handled by GitHub Actions workflows in the respective source repositories.
+
+
+## Clone traffic
+
+![Clone traffic](https://raw.githubusercontent.com/nikolareljin/stats/main/charts/homebrew-tap.svg)
+
+_Updated daily. Total and unique cloners over the last 14 days._
