@@ -1,0 +1,28 @@
+name: Formula test
+
+on:
+  pull_request:
+    paths:
+      - "Formula/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula: [agentvault, git-lantern]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 @ 2026-09-10
+
+      - name: Install and test formula
+        shell: bash
+        run: |
+          set -euo pipefail
+          formula="Formula/${{ matrix.formula }}.rb"
+          brew style "$formula"
+          brew install --build-from-source "$formula"
+          brew test "${{ matrix.formula }}"
