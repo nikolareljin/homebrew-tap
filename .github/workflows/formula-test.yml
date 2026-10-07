@@ -24,5 +24,8 @@ jobs:
           set -euo pipefail
           formula="Formula/${{ matrix.formula }}.rb"
           brew style "$formula"
-          brew install --build-from-source "$formula"
-          brew test "${{ matrix.formula }}"
+          brew tap-new nikolareljin/tap
+          tap_path="$(brew --repository)/Library/Taps/nikolareljin/homebrew-tap/Formula"
+          cp "$formula" "$tap_path/${{ matrix.formula }}.rb"
+          brew install --build-from-source "nikolareljin/tap/${{ matrix.formula }}"
+          brew test "nikolareljin/tap/${{ matrix.formula }}"
