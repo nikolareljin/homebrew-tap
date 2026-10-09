@@ -1,0 +1,31 @@
+name: Formula test
+
+on:
+  pull_request:
+    paths:
+      - "Formula/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula: [agentvault, git-lantern]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 @ 2026-09-10
+
+      - name: Install and test formula
+        shell: bash
+        run: |
+          set -euo pipefail
+          formula="Formula/${{ matrix.formula }}.rb"
+          brew style "$formula"
+          brew tap-new nikolareljin/tap
+          tap_path="$(brew --repository)/Library/Taps/nikolareljin/homebrew-tap/Formula"
+          cp "$formula" "$tap_path/${{ matrix.formula }}.rb"
+          brew install --build-from-source "nikolareljin/tap/${{ matrix.formula }}"
+          brew test "nikolareljin/tap/${{ matrix.formula }}"

@@ -25,6 +25,14 @@ CLI image viewer for terminal environments. View images directly in your termina
 
 [📦 Source](https://github.com/nikolareljin/image-view) | [📋 Releases](https://github.com/nikolareljin/image-view/releases)
 
+### [agentvault](https://github.com/nikolareljin/agentvault)
+CLI and TUI for managing agent configurations and instructions. Install with
+`brew install nikolareljin/tap/agentvault` and run `agentvault`.
+
+### [git-lantern](https://github.com/nikolareljin/git-lantern)
+Repository visibility and status toolkit. Install with
+`brew install nikolareljin/tap/git-lantern` and run `lantern`.
+
 ## Updates
 
 Formulas in this tap are automatically updated when new releases are published. The update process is handled by GitHub Actions workflows in the respective source repositories.
