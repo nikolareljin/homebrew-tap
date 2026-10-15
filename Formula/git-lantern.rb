@@ -1,10 +1,14 @@
+# typed: strict
+# frozen_string_literal: true
+
+# git-lantern: local and GitHub repository visibility and status toolkit.
 class GitLantern < Formula
   include Language::Python::Virtualenv
 
   desc "Local and GitHub repository visibility and status toolkit"
   homepage "https://github.com/nikolareljin/git-lantern"
-  url "https://github.com/nikolareljin/git-lantern/archive/refs/tags/0.8.2.tar.gz"
-  sha256 "e5517a4ae5d0bc001b5ded3fa77db771f5cc756fd72487322c589959737e08a8"
+  url "https://github.com/nikolareljin/git-lantern/archive/refs/tags/0.10.0.tar.gz"
+  sha256 "0cb69ccb00bd331916a53b721859e4f55ff40b3a22cf4577af7909d8897af382"
   license "MIT"
 
   depends_on "python@3.12"
