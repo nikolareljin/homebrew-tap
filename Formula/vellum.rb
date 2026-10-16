@@ -3,7 +3,7 @@ class Vellum < Formula
   homepage "https://github.com/nikolareljin/vellum"
   version "0.7.0"
   license "MIT"
-  tag = "0.7.0"
+  tag = version.to_s
 
   on_macos do
     if Hardware::CPU.arm?
@@ -17,6 +17,8 @@ class Vellum < Formula
 
   on_linux do
     # Releases ship an x86_64 Linux build only.
+    depends_on arch: :x86_64
+
     if Hardware::CPU.intel?
       url "https://github.com/nikolareljin/vellum/releases/download/#{tag}/vellum-#{tag}-linux-x86_64.tar.gz"
       sha256 "fefc0cd5debc7148e46f9d85db4e775c3bcc8b470122d62d93d33c448690f5bf"
