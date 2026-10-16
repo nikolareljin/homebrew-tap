@@ -16,8 +16,11 @@ class Vellum < Formula
   end
 
   on_linux do
-    url "https://github.com/nikolareljin/vellum/releases/download/#{tag}/vellum-#{tag}-linux-x86_64.tar.gz"
-    sha256 "fefc0cd5debc7148e46f9d85db4e775c3bcc8b470122d62d93d33c448690f5bf"
+    # Releases ship an x86_64 Linux build only.
+    if Hardware::CPU.intel?
+      url "https://github.com/nikolareljin/vellum/releases/download/#{tag}/vellum-#{tag}-linux-x86_64.tar.gz"
+      sha256 "fefc0cd5debc7148e46f9d85db4e775c3bcc8b470122d62d93d33c448690f5bf"
+    end
   end
 
   def install
