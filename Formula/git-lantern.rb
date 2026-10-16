@@ -7,8 +7,8 @@ class GitLantern < Formula
 
   desc "Local and GitHub repository visibility and status toolkit"
   homepage "https://github.com/nikolareljin/git-lantern"
-  url "https://github.com/nikolareljin/git-lantern/archive/refs/tags/0.11.0.tar.gz"
-  sha256 "6a1f2ffdb0d54775ff534cd76db786c1db96761308da640fb6b1fc2222484327"
+  url "https://github.com/nikolareljin/git-lantern/archive/refs/tags/0.11.1.tar.gz"
+  sha256 "fa5f8fe8de93cdc8da6a629f719aef74ee23e4bce185d16a633054c147b2d51f"
   license "MIT"
 
   depends_on "python@3.12"
