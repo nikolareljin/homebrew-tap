@@ -5,17 +5,17 @@
 class Agentvault < Formula
   desc "CLI and TUI for managing agent configurations and instructions"
   homepage "https://github.com/nikolareljin/agentvault"
-  version "0.15.1"
+  version "0.15.2"
   license "MIT"
   tag = version.to_s
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nikolareljin/agentvault/releases/download/#{tag}/agentvault-darwin-arm64"
-      sha256 "c299969cbddb88f293bf196557b3e1f30eb8cf23dea24465d9a3e4b8bf0b1e5a"
+      sha256 "ef22e5f6bad7bc575f02a3ef61dd84c6b7a82658a4e1a9e4ff95a6f824220d38"
     else
       url "https://github.com/nikolareljin/agentvault/releases/download/#{tag}/agentvault-darwin-amd64"
-      sha256 "a4daaaf7825e483999d8399f608e1cbe503f6421912949891a4b10757c764add"
+      sha256 "39de79fe11309fcdb3f253827afe46fd2dbb3f2119487e0e74d10508d41aca6a"
     end
   end
 
